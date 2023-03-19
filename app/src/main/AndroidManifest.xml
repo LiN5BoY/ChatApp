@@ -11,9 +11,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatApp"
         tools:targetApi="31">
+        <!--
+        android:windowSoftInputMode="adjustResize"
+        调整大小状态，这个属性表示Activity的主窗口总是会被调整大小来保证软键盘的显示空间。如果界面中有可滑动控件
+        显示效果跟adjustUnspecified显示效果一样；如果界面中没有可滑动控件
+        软键盘可能会盖住一些控件(布局的位置不会发生变化，可能获取了焦点的控件被软键盘盖住)。
+        -->
         <activity android:name=".activities.SignUpActivity"
             android:windowSoftInputMode="adjustResize"
             />
+        <!--
+        android:exported="true"
+        在Activity中该属性用来标示:当前Activity是否可以被另一个Application的组件启动:true允许被启动;false不允许被启动。
+        -->
         <activity android:name=".activities.SignInActivity"
             android:windowSoftInputMode="adjustResize"
             android:exported="true">
